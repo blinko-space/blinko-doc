@@ -70,17 +70,17 @@ export default defineConfig({
       message: 'Released under the MIT License.',
     },
 
-    search: {
-      provider: 'algolia',
-      options: {
-        appId: '69Y3N7LHI2',
-        apiKey: '45441f4b65a2f80329fd45c7cb371fea',
-        indexName: 'pinia'
-      },
-    },
+    // search: {
+    //   provider: 'algolia',
+    //   options: {
+    //     appId: '',
+    //     apiKey: '',
+    //     indexName: ''
+    //   },
+    // },
 
     editLink: {
-      pattern: 'https://github.com/vuejs/pinia/edit/v2/packages/docs/:path',
+      pattern: 'https://github.com/blinko-space/blinko-doc/:path',
       text: 'Suggest changes',
     },
   },

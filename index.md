@@ -8,7 +8,7 @@ hero:
   tagline: AI-Enhanced,Fast,Simplified,Artistic
   image:
     src: /single-logo.svg
-    alt: Pinia
+    alt: Blinko
   actions:
     - theme: brand
       text: Get Started

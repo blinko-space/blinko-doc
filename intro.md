@@ -2,8 +2,6 @@
 
 Blinko is an **innovative**  open-source project designed for individuals who want to quickly capture and organize their fleeting thoughts. Blinko allows users to seamlessly jot down ideas the moment they strike, ensuring that no spark of creativity is lost.
 
-https://github.com/vuejs/pinia/blob/v2/packages/docs/index.md
-
 ![](/home.png)
 
 ## Why should i use Blinko?
