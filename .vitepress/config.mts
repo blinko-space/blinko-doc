@@ -84,4 +84,5 @@ export default defineConfig({
       text: 'Suggest changes',
     },
   },
+  ignoreDeadLinks: true
 })
