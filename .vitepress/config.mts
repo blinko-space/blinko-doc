@@ -21,9 +21,9 @@ export default defineConfig({
       {
         text: 'Intallation',
         items: [
-          { text: 'Docker Install', link: '/install/docker-install' },
-          // { text: 'Database', link: '/install/database.md' },
+          { text: 'Get Started', link: '/install/install' },
           { text: 'Runtime Options', link: '/install/env.md' },
+          { text: 'Update', link: '/install/update.md' },
         ]
       },
       {

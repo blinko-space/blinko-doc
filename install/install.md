@@ -8,11 +8,12 @@ This document provides a basic guide on deploying Blinko with Docker.
 Check [env](/install/runtime-options.html) to know what environment variables need to be configured.
 :::
 
-## Bash Install (comming soon)
+## Bash Install
 ```bash
-curl xxxx.sh
-
+curl -s https://raw.githubusercontent.com/blinko-space/blinko/main/install.sh | bash
 ```
+
+
 
 ## Docker Install
 Blinko use the [**postgres**](https://www.postgresql.org/download/windows/) database,use [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) cli to export or import user's data,refer to [Schedule Backup](/advance-settings/schedule-backup.md)
