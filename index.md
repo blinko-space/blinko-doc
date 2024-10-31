@@ -15,7 +15,7 @@ hero:
       link: /intro
     - theme: alt
       text: Demo
-      link: https://blinko-five.vercel.app/
+      link: https://blinko-demo.vercel.app/
 
 features:
   - title: 🤖 AI-Enhanced
