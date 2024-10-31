@@ -10,7 +10,7 @@ Check [env](/install/runtime-options.html) to know what environment variables ne
 
 ## Bash Install
 ```bash
-curl -s https://raw.githubusercontent.com/blinko-space/blinko/main/install.sh | bash
+curl -o install.sh https://raw.githubusercontent.com/blinko-space/blinko/main/install.sh && bash install.sh
 ```
 
 

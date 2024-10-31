@@ -10,6 +10,6 @@ Check [env](/install/runtime-options.html) to know what environment variables ne
 
 ## Update latest version
 ```bash
-curl -s https://raw.githubusercontent.com/blinko-space/blinko/main/update.sh | bash
+curl -o update.sh https://raw.githubusercontent.com/blinko-space/blinko/refs/heads/main/update.sh && bash update.sh
 ```
 
