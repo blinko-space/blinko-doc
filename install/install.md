@@ -17,30 +17,37 @@ curl -o install.sh https://raw.githubusercontent.com/blinko-space/blinko/main/in
 
 ## Docker Install
 Blinko use the [**postgres**](https://www.postgresql.org/download/windows/) database,use [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) cli to export or import user's data,refer to [Schedule Backup](/advance-settings/schedule-backup.md)
-1. Run the postgres container
+
+
+### Step 1: Create the custom Docker network
+```bash
+docker network create blinko-network
+```
+### Step 2: Run the PostgreSQL database container
 ```bash
 docker run -d \
   --name blinko-postgres \
+  --network blinko-network \
   -p 5435:5432 \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=mysecretpassword \
   -e TZ=Asia/Shanghai \
+  --restart always \
   postgres:14
 ```
-
-2.Run the blinko-website container
+### Step 3: Run the Blinko website container
 ```bash
 docker run -d \
   --name blinko-website \
+  --network blinko-network \
   -p 1111:1111 \
   -e NODE_ENV=production \
   -e NEXTAUTH_URL=http://localhost:1111 \
   -e NEXT_PUBLIC_BASE_URL=http://localhost:1111 \
   -e NEXTAUTH_SECRET=my_ultra_secure_nextauth_secret \
-  -e JWT_SECRET=MBqmAZqgbe0I66Jx3sFd/nMoU3paITpHznScerTHJNo2 \
   -e DATABASE_URL=postgresql://postgres:mysecretpassword@blinko-postgres:5432/postgres \
-  --link blinko-postgres:postgres \
+  --restart always \
   blinkospace/blinko:latest
 ```
 
