@@ -28,7 +28,7 @@ docker network create blinko-network
 docker run -d \
   --name blinko-postgres \
   --network blinko-network \
-  -p 5435:5432 \
+  -p 5432:5432 \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_PASSWORD=mysecretpassword \
@@ -89,7 +89,7 @@ services:
     container_name: blinko-postgres
     restart: always
     ports:
-      - 5435:5432
+      - 5432:5432
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
