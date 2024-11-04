@@ -55,6 +55,10 @@ docker run -d \
 To deploy Blinko using docker compose, create a docker-compose.yml file with the following configuration:
 
 ```yml
+networks:
+  blinko-network:
+    driver: bridge
+
 services:
   blinko-website:
     image: blinkospace/blinko:latest
@@ -68,8 +72,9 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    volumes:
-      - ~/.blinko/:/app/.blinko
+    # Make sure you have enough permissions.
+    # volumes:
+      # - ~/your-name/.blinko:/app/.blinko 
     restart: always
     logging:
       options:
@@ -83,6 +88,8 @@ services:
       timeout: 10s   
       retries: 5     
       start_period: 30s 
+    networks:
+      - blinko-network
 
   postgres:
     image: postgres:14
@@ -101,6 +108,8 @@ services:
       interval: 5s
       timeout: 10s
       retries: 5
+    networks:
+      - blinko-network
 ```
 
 Now, execute docker-compose command to initiate Blinko. 
