@@ -12,7 +12,9 @@ Check [env](/install/runtime-options.html) to know what environment variables ne
 ```bash
 curl -o install.sh https://raw.githubusercontent.com/blinko-space/blinko/main/install.sh && bash install.sh
 ```
-
+::: tip
+Please note that you must set the volumns binding to /app/.blinko , otherwise the upgrade will result in the loss of uploaded files!
+:::
 
 
 ## Docker Install
