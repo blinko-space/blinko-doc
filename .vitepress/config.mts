@@ -80,7 +80,7 @@ export default defineConfig({
     // },
 
     editLink: {
-      pattern: 'https://github.com/blinko-space/blinko-doc/:path',
+      pattern: 'https://github.com/blinko-space/blinko-doc/blob/main/:path',
       text: 'Suggest changes',
     },
   },
