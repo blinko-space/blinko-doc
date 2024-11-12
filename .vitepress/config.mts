@@ -67,7 +67,7 @@ export default defineConfig({
 
     footer: {
       copyright: 'Copyright © 20204-present Blinko',
-      message: 'Released under the MIT License.',
+      message: 'Released under the AGPL-3.0 License.',
     },
 
     // search: {
