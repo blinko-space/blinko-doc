@@ -1,4 +1,4 @@
-# Docker Intall
+# Docker Install
 This document provides a basic guide on deploying Blinko with Docker.
 
 ## Prerequisites
